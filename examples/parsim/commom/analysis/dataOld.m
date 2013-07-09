@@ -1,0 +1,15 @@
+nbDataPacketsForwarded(1) = 626625;
+nbDataPacketsForwarded(2) = 26708;
+nbDataPacketsForwarded(3) = 285076;
+nbDataPacketsReceived(1) = 151107;
+nbDataPacketsReceived(2) = 22745;
+nbDataPacketsReceived(3) = 92122;
+nbDataPacketsSent(1) = 403543;
+nbDataPacketsSent(2) = 44750;
+nbDataPacketsSent(3) = 224700;
+Meanpowerconsumption(1) = 4567.532341772160;
+Meanpowerconsumption(2) = 563.922572474697;
+Meanpowerconsumption(3) = 4567.970596264494;
+devicetotalmWs(1) = 22883366.89972212;
+devicetotalmWs(2) = 2825800.678897583792;
+devicetotalmWs(3) = 22885832.22408378;

@@ -1,4 +1,5 @@
 examples
+examples-inet
 src/base
-src/inet_stub
 src/modules
+src/parsim

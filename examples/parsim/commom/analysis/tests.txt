@@ -1,0 +1,21 @@
+Description of the tests:
+
+Interval between two transmissions on each node: 1s
+Sink node: 0
+Route discovery: every 1200s started by the sink node
+
+1) 80 nodes transmitting data to the sink.
+	- 5000 packets each one
+
+
+2) 9 nodes transmitting data to the sink.
+	- 5000 packets each one
+	- the whole space (9x9) was subdivided into 3x3 squares
+	- only the nodes positioned in the middle of the squares transmitted data
+	- node numbers: 10, 13, 16, 37, 40, 43, 64, 67, 70
+	- all the others are turned off
+
+3) 80 nodes transmitting data to the sink
+	- the whole space (9x9) was subdivided into 3x3 squares
+	- only the nodes positioned in the middle of the squares transmitted 5000 packets
+	- other nodes transmitted 2500

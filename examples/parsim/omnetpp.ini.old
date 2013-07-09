@@ -1,0 +1,86 @@
+[General]
+
+network = Forest
+sim-time-limit = 5010s
+#cmdenv-express-mode = false
+
+**.plan = ${plan= 1, 2, 3}
+
+**.playgroundSizeZ = 0
+
+*.**.coreDebug = false
+*.**.debug = true
+
+**.battery.debug = true
+**.batteryStats.debug = true
+**.batteryStats.detail = true
+**.batteryStats.timeSeries = true
+**.sendDirect = true # set true to hide arrows
+
+################ connection manager #####################
+
+**.connectionManager.pMax = 1.1mW
+**.connectionManager.sat = -100dBm
+**.connectionManager.alpha = 2.0
+**.connectionManager.carrierFrequency = 2.4GHz
+
+
+**.SecondChannel.pMax = 1.1mW
+**.SecondChannel.sat = -100dBm
+**.SecondChannel.alpha = 2.0
+**.SecondChannel.carrierFrequency = 2.483GHz
+
+################ PhyLayer parameters #####################
+**.network*[*].nic.phy.usePropagationDelay = false
+**.network*[*].nic.phy.sensitivity = ${sensitivity = -100dBm}
+**.network*[*].nic.phy.maxTXPower = 100.0mW
+**.network*[*].nic.phy.initialRadioState = 0
+**.network*[*].nic.phy.useThermalNoise = true
+**.network*[*].nic.phy.thermalNoise = -100dBm
+
+**.networkOne[*].nic.phy.analogueModels = xmldoc("config.xml")
+*.networkOne[*].nic.connectionManagerName = "connectionManager"
+
+**.networkTwo[*].nic.phy.analogueModels = xmldoc("config2.xml")
+*.networkTwo[*].nic.connectionManagerName = "SecondChannel"
+
+################ Mobility parameters #####################
+**.network*[*].mobility.initialZ = 0
+**.network*[*].mobilityType = "StationaryMobility"
+**.network*[*].mobility.initFromDisplayString = false
+
+################ Network layer parameters #####################
+**.network*[*].networkType = "WiseRoute"
+**.network*[*].netwl.stats = true
+**.network*[*].netwl.headerLength = 24 bit
+**.network*[*].netwl.sinkAddress = 0
+**.network*[0].netwl.routeFloodsInterval = 1200 s
+**.network*[*].netwl.rssiThreshold = ${sensitivity}
+
+
+################ Application layer parameters #####################
+**.network*[*].appl.trace = true
+**.network*[*].appl.destAddr = 0
+
+**.network*[*].appl.broadcastPackets = false
+**.network*[*].appl.trafficType = "exponential"
+**.network*[*].appl.trafficParam = 1s  
+**.network*[*].appl.initializationTime = 10 s
+**.network*[*].appl.headerLength = 2 byte
+**.network*[*].applicationType = "SensorApplLayer"
+
+################ MAC layer parameters ####################
+**.network*[*].nic.mac.bitrate = 250000bps
+**.network*[*].nic.mac.headerLength = 24bit
+**.network*[*].nic.mac.txPower = 1mW  # [mW]
+**.network*[*].nic.mac.useMACAcks = false
+
+**.network*[0].appl.nbPackets = ${0, 0, 0 ! plan}
+
+[Config Nodes_in_grid]
+include commom/params/position-grid.ini # positions
+
+# plans
+include commom/params/plan-grid.ini # positions
+
+

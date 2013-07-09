@@ -1,0 +1,378 @@
+version 2
+run P2P-1-20130702-15:39:45-10834
+attr configname P2P
+attr datetime 20130702-15:39:45
+attr experiment P2P
+attr inifile omnetpp.ini
+attr iterationvars "$0=5000, $1=0, $plan=2, $sensitivity=-94dBm, $2=0"
+attr iterationvars2 "$0=5000, $1=0, $plan=2, $sensitivity=-94dBm, $2=0, $repetition=0"
+attr measurement "$0=5000, $1=0, $plan=2, $sensitivity=-94dBm, $2=0"
+attr network Forest
+attr plan 2
+attr processid 10834
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+attr sensitivity -94dBm
+
+scalar . 	plan 	2
+scalar . 	sensitivity 	-94
+attr unit  dBm
+scalar Forest.networkOne[0].nic.mac 	nbTxFrames 	5
+scalar Forest.networkOne[0].nic.mac 	nbRxFrames 	4655
+scalar Forest.networkOne[0].nic.mac 	nbDroppedFrames 	0
+scalar Forest.networkOne[0].nic.mac 	nbMissedAcks 	0
+scalar Forest.networkOne[0].nic.mac 	nbRecvdAcks 	0
+scalar Forest.networkOne[0].nic.mac 	nbTxAcks 	0
+scalar Forest.networkOne[0].nic.mac 	nbDuplicates 	0
+scalar Forest.networkOne[0].nic.mac 	meanBackoff 	0.001536
+scalar Forest.networkOne[0].nic.mac 	nbBackoffs 	5
+scalar Forest.networkOne[0].nic.mac 	backoffDurations 	0.00768
+scalar Forest.networkOne[0].nic.phy 	nbFramesWithInterference 	0
+scalar Forest.networkOne[0].nic.phy 	nbFramesWithoutInterference 	4655
+scalar Forest.networkOne[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Forest.networkOne[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Forest.networkOne[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Forest.networkOne[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Forest.networkOne[0].netwl 	nbDataPacketsForwarded 	0
+scalar Forest.networkOne[0].netwl 	nbDataPacketsReceived 	4650
+scalar Forest.networkOne[0].netwl 	nbDataPacketsSent 	0
+scalar Forest.networkOne[0].netwl 	nbDuplicatedFloodsReceived 	5
+scalar Forest.networkOne[0].netwl 	nbFloodsSent 	5
+scalar Forest.networkOne[0].netwl 	nbPureUnicastSent 	0
+scalar Forest.networkOne[0].netwl 	nbRouteFloodsSent 	5
+scalar Forest.networkOne[0].netwl 	nbRouteFloodsReceived 	0
+scalar Forest.networkOne[0].netwl 	nbUnicastFloodForwarded 	0
+scalar Forest.networkOne[0].netwl 	nbPureUnicastForwarded 	0
+scalar Forest.networkOne[0].netwl 	nbGetRouteFailures 	0
+scalar Forest.networkOne[0].netwl 	nbRoutesRecorded 	0
+scalar Forest.networkOne[0].netwl 	meanNbHops 	0
+scalar Forest.networkOne[0].tranl 	nbAggrPktReceived 	0
+scalar Forest.networkOne[0].tranl 	"nbAggrPktSentDown " 	0
+scalar Forest.networkOne[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Forest.networkOne[0].batteryStats 	total 	282610.82291405
+attr unit  mW-s
+scalar Forest.networkOne[0].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Forest.networkOne[0].batteryStats 	"Mean power consumption" 	56.400895574311
+attr unit  mW
+scalar Forest.networkOne[0].batteryStats 	"num devices" 	2
+scalar Forest.networkOne[0].batteryStats 	"physical layer" 	0
+scalar Forest.networkOne[0].batteryStats 	"device total (mWs)" 	282606.31323851
+scalar Forest.networkOne[0].batteryStats 	account 	0
+scalar Forest.networkOne[0].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkOne[0].batteryStats 	"time (s)" 	0
+scalar Forest.networkOne[0].batteryStats 	"account 0" 	0
+scalar Forest.networkOne[0].batteryStats 	account 	1
+scalar Forest.networkOne[0].batteryStats 	"energy (mWs)" 	282605.92933451
+scalar Forest.networkOne[0].batteryStats 	"time (s)" 	5010.7434279168
+scalar Forest.networkOne[0].batteryStats 	"account 1" 	282605.92933451
+scalar Forest.networkOne[0].batteryStats 	account 	2
+scalar Forest.networkOne[0].batteryStats 	"energy (mWs)" 	0.275616
+scalar Forest.networkOne[0].batteryStats 	"time (s)" 	0.00528
+scalar Forest.networkOne[0].batteryStats 	"account 2" 	0.275616
+scalar Forest.networkOne[0].batteryStats 	account 	3
+scalar Forest.networkOne[0].batteryStats 	"energy (mWs)" 	0.108288
+scalar Forest.networkOne[0].batteryStats 	"time (s)" 	0.00192
+scalar Forest.networkOne[0].batteryStats 	"account 3" 	0.108288
+scalar Forest.networkOne[0].batteryStats 	account 	4
+scalar Forest.networkOne[0].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkOne[0].batteryStats 	"time (s)" 	0
+scalar Forest.networkOne[0].batteryStats 	"account 4" 	0
+scalar Forest.networkOne[0].batteryStats 	TemperatureSensorLayer 	1
+scalar Forest.networkOne[0].batteryStats 	"device total (mWs)" 	4.5096755651252
+scalar Forest.networkOne[0].batteryStats 	account 	0
+scalar Forest.networkOne[0].batteryStats 	"energy (mWs)" 	4.5096755651252
+scalar Forest.networkOne[0].batteryStats 	"time (s)" 	5010.7506279168
+scalar Forest.networkOne[0].batteryStats 	"account 0" 	4.5096755651252
+scalar Forest.networkOne[0].applSensor 	latency1 	0.0043392688172043
+attr unit  s
+statistic Forest.networkOne[0].applSensor 	1
+field count 4650
+field mean 0.0043392688172043
+field stddev 0.00073865765043014
+field sum 20.1776
+field sqrsum 0.090092595200003
+field min 0.003232
+field max 0.005472
+scalar Forest.networkOne[0].applSensor 	"activity duration" 	4998.5005107191
+attr unit  s
+scalar Forest.networkOne[0].applSensor 	firstPacketGeneration 	11.077184808133
+attr unit  s
+scalar Forest.networkOne[0].applSensor 	lastPacketReception 	5009.5776955272
+attr unit  s
+scalar Forest.networkOne[0].applSensor 	nbPacketsSent 	0
+scalar Forest.networkOne[0].applSensor 	nbPacketsReceived 	4650
+statistic Forest.networkOne[0].applSensor 	latency
+field count 4650
+field mean 0.0043392688172043
+field stddev 0.00073865765043014
+field sum 20.1776
+field sqrsum 0.090092595200003
+field min 0.003232
+field max 0.005472
+scalar Forest.networkOne[1].nic.mac 	nbTxFrames 	4661
+scalar Forest.networkOne[1].nic.mac 	nbRxFrames 	5
+scalar Forest.networkOne[1].nic.mac 	nbDroppedFrames 	0
+scalar Forest.networkOne[1].nic.mac 	nbMissedAcks 	0
+scalar Forest.networkOne[1].nic.mac 	nbRecvdAcks 	0
+scalar Forest.networkOne[1].nic.mac 	nbTxAcks 	0
+scalar Forest.networkOne[1].nic.mac 	nbDuplicates 	0
+scalar Forest.networkOne[1].nic.mac 	meanBackoff 	0.001106989916327
+scalar Forest.networkOne[1].nic.mac 	nbBackoffs 	4661
+scalar Forest.networkOne[1].nic.mac 	backoffDurations 	5.15968
+scalar Forest.networkOne[1].nic.phy 	nbFramesWithInterference 	0
+scalar Forest.networkOne[1].nic.phy 	nbFramesWithoutInterference 	5
+scalar Forest.networkOne[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Forest.networkOne[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Forest.networkOne[1].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Forest.networkOne[1].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Forest.networkOne[1].netwl 	nbDataPacketsForwarded 	5
+scalar Forest.networkOne[1].netwl 	nbDataPacketsReceived 	0
+scalar Forest.networkOne[1].netwl 	nbDataPacketsSent 	4656
+scalar Forest.networkOne[1].netwl 	nbDuplicatedFloodsReceived 	0
+scalar Forest.networkOne[1].netwl 	nbFloodsSent 	0
+scalar Forest.networkOne[1].netwl 	nbPureUnicastSent 	4656
+scalar Forest.networkOne[1].netwl 	nbRouteFloodsSent 	0
+scalar Forest.networkOne[1].netwl 	nbRouteFloodsReceived 	5
+scalar Forest.networkOne[1].netwl 	nbUnicastFloodForwarded 	0
+scalar Forest.networkOne[1].netwl 	nbPureUnicastForwarded 	0
+scalar Forest.networkOne[1].netwl 	nbGetRouteFailures 	0
+scalar Forest.networkOne[1].netwl 	nbRoutesRecorded 	1
+scalar Forest.networkOne[1].netwl 	meanNbHops 	-nan
+scalar Forest.networkOne[1].tranl 	nbAggrPktReceived 	0
+scalar Forest.networkOne[1].tranl 	"nbAggrPktSentDown " 	0
+scalar Forest.networkOne[1].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Forest.networkOne[1].batteryStats 	total 	283203.17786166
+attr unit  mW-s
+scalar Forest.networkOne[1].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Forest.networkOne[1].batteryStats 	"Mean power consumption" 	56.519112382849
+attr unit  mW
+scalar Forest.networkOne[1].batteryStats 	"num devices" 	2
+scalar Forest.networkOne[1].batteryStats 	"physical layer" 	0
+scalar Forest.networkOne[1].batteryStats 	"device total (mWs)" 	282584.41141444
+scalar Forest.networkOne[1].batteryStats 	account 	0
+scalar Forest.networkOne[1].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkOne[1].batteryStats 	"time (s)" 	0
+scalar Forest.networkOne[1].batteryStats 	"account 0" 	0
+scalar Forest.networkOne[1].batteryStats 	account 	1
+scalar Forest.networkOne[1].batteryStats 	"energy (mWs)" 	282210.98134084
+scalar Forest.networkOne[1].batteryStats 	"time (s)" 	5003.7408039168
+scalar Forest.networkOne[1].batteryStats 	"account 1" 	282210.98134084
+scalar Forest.networkOne[1].batteryStats 	account 	2
+scalar Forest.networkOne[1].batteryStats 	"energy (mWs)" 	272.48399999998
+scalar Forest.networkOne[1].batteryStats 	"time (s)" 	5.22
+scalar Forest.networkOne[1].batteryStats 	"account 2" 	272.48399999998
+scalar Forest.networkOne[1].batteryStats 	account 	3
+scalar Forest.networkOne[1].batteryStats 	"energy (mWs)" 	100.94607359999
+scalar Forest.networkOne[1].batteryStats 	"time (s)" 	1.789824
+scalar Forest.networkOne[1].batteryStats 	"account 3" 	100.94607359999
+scalar Forest.networkOne[1].batteryStats 	account 	4
+scalar Forest.networkOne[1].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkOne[1].batteryStats 	"time (s)" 	0
+scalar Forest.networkOne[1].batteryStats 	"account 4" 	0
+scalar Forest.networkOne[1].batteryStats 	TemperatureSensorLayer 	1
+scalar Forest.networkOne[1].batteryStats 	"device total (mWs)" 	618.7664435652
+scalar Forest.networkOne[1].batteryStats 	account 	0
+scalar Forest.networkOne[1].batteryStats 	"energy (mWs)" 	618.7664435652
+scalar Forest.networkOne[1].batteryStats 	"time (s)" 	5010.7506279168
+scalar Forest.networkOne[1].batteryStats 	"account 0" 	618.7664435652
+scalar Forest.networkOne[1].applSensor 	"activity duration" 	-1
+attr unit  s
+scalar Forest.networkOne[1].applSensor 	firstPacketGeneration 	-1
+attr unit  s
+scalar Forest.networkOne[1].applSensor 	lastPacketReception 	-2
+attr unit  s
+scalar Forest.networkOne[1].applSensor 	nbPacketsSent 	4656
+scalar Forest.networkOne[1].applSensor 	nbPacketsReceived 	0
+statistic Forest.networkOne[1].applSensor 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0
+scalar Forest.networkTwo[0].nic.mac 	nbTxFrames 	5
+scalar Forest.networkTwo[0].nic.mac 	nbRxFrames 	4643
+scalar Forest.networkTwo[0].nic.mac 	nbDroppedFrames 	0
+scalar Forest.networkTwo[0].nic.mac 	nbMissedAcks 	0
+scalar Forest.networkTwo[0].nic.mac 	nbRecvdAcks 	0
+scalar Forest.networkTwo[0].nic.mac 	nbTxAcks 	0
+scalar Forest.networkTwo[0].nic.mac 	nbDuplicates 	0
+scalar Forest.networkTwo[0].nic.mac 	meanBackoff 	0.000704
+scalar Forest.networkTwo[0].nic.mac 	nbBackoffs 	5
+scalar Forest.networkTwo[0].nic.mac 	backoffDurations 	0.00352
+scalar Forest.networkTwo[0].nic.phy 	nbFramesWithInterference 	0
+scalar Forest.networkTwo[0].nic.phy 	nbFramesWithoutInterference 	4643
+scalar Forest.networkTwo[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Forest.networkTwo[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Forest.networkTwo[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Forest.networkTwo[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Forest.networkTwo[0].netwl 	nbDataPacketsForwarded 	0
+scalar Forest.networkTwo[0].netwl 	nbDataPacketsReceived 	4638
+scalar Forest.networkTwo[0].netwl 	nbDataPacketsSent 	0
+scalar Forest.networkTwo[0].netwl 	nbDuplicatedFloodsReceived 	5
+scalar Forest.networkTwo[0].netwl 	nbFloodsSent 	5
+scalar Forest.networkTwo[0].netwl 	nbPureUnicastSent 	0
+scalar Forest.networkTwo[0].netwl 	nbRouteFloodsSent 	5
+scalar Forest.networkTwo[0].netwl 	nbRouteFloodsReceived 	0
+scalar Forest.networkTwo[0].netwl 	nbUnicastFloodForwarded 	0
+scalar Forest.networkTwo[0].netwl 	nbPureUnicastForwarded 	0
+scalar Forest.networkTwo[0].netwl 	nbGetRouteFailures 	0
+scalar Forest.networkTwo[0].netwl 	nbRoutesRecorded 	0
+scalar Forest.networkTwo[0].netwl 	meanNbHops 	0
+scalar Forest.networkTwo[0].tranl 	nbAggrPktReceived 	0
+scalar Forest.networkTwo[0].tranl 	"nbAggrPktSentDown " 	0
+scalar Forest.networkTwo[0].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Forest.networkTwo[0].batteryStats 	total 	282610.82291405
+attr unit  mW-s
+scalar Forest.networkTwo[0].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Forest.networkTwo[0].batteryStats 	"Mean power consumption" 	56.400895574311
+attr unit  mW
+scalar Forest.networkTwo[0].batteryStats 	"num devices" 	2
+scalar Forest.networkTwo[0].batteryStats 	"physical layer" 	0
+scalar Forest.networkTwo[0].batteryStats 	"device total (mWs)" 	282606.31323851
+scalar Forest.networkTwo[0].batteryStats 	account 	0
+scalar Forest.networkTwo[0].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkTwo[0].batteryStats 	"time (s)" 	0
+scalar Forest.networkTwo[0].batteryStats 	"account 0" 	0
+scalar Forest.networkTwo[0].batteryStats 	account 	1
+scalar Forest.networkTwo[0].batteryStats 	"energy (mWs)" 	282605.92933451
+scalar Forest.networkTwo[0].batteryStats 	"time (s)" 	5010.7434279168
+scalar Forest.networkTwo[0].batteryStats 	"account 1" 	282605.92933451
+scalar Forest.networkTwo[0].batteryStats 	account 	2
+scalar Forest.networkTwo[0].batteryStats 	"energy (mWs)" 	0.275616
+scalar Forest.networkTwo[0].batteryStats 	"time (s)" 	0.00528
+scalar Forest.networkTwo[0].batteryStats 	"account 2" 	0.275616
+scalar Forest.networkTwo[0].batteryStats 	account 	3
+scalar Forest.networkTwo[0].batteryStats 	"energy (mWs)" 	0.108288
+scalar Forest.networkTwo[0].batteryStats 	"time (s)" 	0.00192
+scalar Forest.networkTwo[0].batteryStats 	"account 3" 	0.108288
+scalar Forest.networkTwo[0].batteryStats 	account 	4
+scalar Forest.networkTwo[0].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkTwo[0].batteryStats 	"time (s)" 	0
+scalar Forest.networkTwo[0].batteryStats 	"account 4" 	0
+scalar Forest.networkTwo[0].batteryStats 	TemperatureSensorLayer 	1
+scalar Forest.networkTwo[0].batteryStats 	"device total (mWs)" 	4.5096755651252
+scalar Forest.networkTwo[0].batteryStats 	account 	0
+scalar Forest.networkTwo[0].batteryStats 	"energy (mWs)" 	4.5096755651252
+scalar Forest.networkTwo[0].batteryStats 	"time (s)" 	5010.7506279168
+scalar Forest.networkTwo[0].batteryStats 	"account 0" 	4.5096755651252
+scalar Forest.networkTwo[0].applSensor 	latency1 	0.0043473773178094
+attr unit  s
+statistic Forest.networkTwo[0].applSensor 	1
+field count 4638
+field mean 0.0043473773178094
+field stddev 0.00073131644421409
+field sum 20.163136
+field sqrsum 0.090136737792003
+field min 0.003232
+field max 0.005472
+scalar Forest.networkTwo[0].applSensor 	"activity duration" 	4998.0561780228
+attr unit  s
+scalar Forest.networkTwo[0].applSensor 	firstPacketGeneration 	11.0125573612
+attr unit  s
+scalar Forest.networkTwo[0].applSensor 	lastPacketReception 	5009.068735384
+attr unit  s
+scalar Forest.networkTwo[0].applSensor 	nbPacketsSent 	0
+scalar Forest.networkTwo[0].applSensor 	nbPacketsReceived 	4638
+statistic Forest.networkTwo[0].applSensor 	latency
+field count 4638
+field mean 0.0043473773178094
+field stddev 0.00073131644421409
+field sum 20.163136
+field sqrsum 0.090136737792003
+field min 0.003232
+field max 0.005472
+scalar Forest.networkTwo[1].nic.mac 	nbTxFrames 	4645
+scalar Forest.networkTwo[1].nic.mac 	nbRxFrames 	5
+scalar Forest.networkTwo[1].nic.mac 	nbDroppedFrames 	0
+scalar Forest.networkTwo[1].nic.mac 	nbMissedAcks 	0
+scalar Forest.networkTwo[1].nic.mac 	nbRecvdAcks 	0
+scalar Forest.networkTwo[1].nic.mac 	nbTxAcks 	0
+scalar Forest.networkTwo[1].nic.mac 	nbDuplicates 	0
+scalar Forest.networkTwo[1].nic.mac 	meanBackoff 	0.001115418729817
+scalar Forest.networkTwo[1].nic.mac 	nbBackoffs 	4645
+scalar Forest.networkTwo[1].nic.mac 	backoffDurations 	5.18112
+scalar Forest.networkTwo[1].nic.phy 	nbFramesWithInterference 	0
+scalar Forest.networkTwo[1].nic.phy 	nbFramesWithoutInterference 	5
+scalar Forest.networkTwo[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Forest.networkTwo[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Forest.networkTwo[1].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Forest.networkTwo[1].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Forest.networkTwo[1].netwl 	nbDataPacketsForwarded 	5
+scalar Forest.networkTwo[1].netwl 	nbDataPacketsReceived 	0
+scalar Forest.networkTwo[1].netwl 	nbDataPacketsSent 	4640
+scalar Forest.networkTwo[1].netwl 	nbDuplicatedFloodsReceived 	0
+scalar Forest.networkTwo[1].netwl 	nbFloodsSent 	0
+scalar Forest.networkTwo[1].netwl 	nbPureUnicastSent 	4640
+scalar Forest.networkTwo[1].netwl 	nbRouteFloodsSent 	0
+scalar Forest.networkTwo[1].netwl 	nbRouteFloodsReceived 	5
+scalar Forest.networkTwo[1].netwl 	nbUnicastFloodForwarded 	0
+scalar Forest.networkTwo[1].netwl 	nbPureUnicastForwarded 	0
+scalar Forest.networkTwo[1].netwl 	nbGetRouteFailures 	0
+scalar Forest.networkTwo[1].netwl 	nbRoutesRecorded 	1
+scalar Forest.networkTwo[1].netwl 	meanNbHops 	-nan
+scalar Forest.networkTwo[1].tranl 	nbAggrPktReceived 	0
+scalar Forest.networkTwo[1].tranl 	"nbAggrPktSentDown " 	0
+scalar Forest.networkTwo[1].batteryStats 	nominal 	10800000
+attr unit  mW-s
+scalar Forest.networkTwo[1].batteryStats 	total 	283201.14227771
+attr unit  mW-s
+scalar Forest.networkTwo[1].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Forest.networkTwo[1].batteryStats 	"Mean power consumption" 	56.518706139532
+attr unit  mW
+scalar Forest.networkTwo[1].batteryStats 	"num devices" 	2
+scalar Forest.networkTwo[1].batteryStats 	"physical layer" 	0
+scalar Forest.networkTwo[1].batteryStats 	"device total (mWs)" 	282584.48667845
+scalar Forest.networkTwo[1].batteryStats 	account 	0
+scalar Forest.networkTwo[1].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkTwo[1].batteryStats 	"time (s)" 	0
+scalar Forest.networkTwo[1].batteryStats 	"account 0" 	0
+scalar Forest.networkTwo[1].batteryStats 	account 	1
+scalar Forest.networkTwo[1].batteryStats 	"energy (mWs)" 	282212.33855045
+scalar Forest.networkTwo[1].batteryStats 	"time (s)" 	5003.7648679168
+scalar Forest.networkTwo[1].batteryStats 	"account 1" 	282212.33855045
+scalar Forest.networkTwo[1].batteryStats 	account 	2
+scalar Forest.networkTwo[1].batteryStats 	"energy (mWs)" 	271.54857599998
+scalar Forest.networkTwo[1].batteryStats 	"time (s)" 	5.20208
+scalar Forest.networkTwo[1].batteryStats 	"account 2" 	271.54857599998
+scalar Forest.networkTwo[1].batteryStats 	account 	3
+scalar Forest.networkTwo[1].batteryStats 	"energy (mWs)" 	100.59955199999
+scalar Forest.networkTwo[1].batteryStats 	"time (s)" 	1.78368
+scalar Forest.networkTwo[1].batteryStats 	"account 3" 	100.59955199999
+scalar Forest.networkTwo[1].batteryStats 	account 	4
+scalar Forest.networkTwo[1].batteryStats 	"energy (mWs)" 	0
+scalar Forest.networkTwo[1].batteryStats 	"time (s)" 	0
+scalar Forest.networkTwo[1].batteryStats 	"account 4" 	0
+scalar Forest.networkTwo[1].batteryStats 	TemperatureSensorLayer 	1
+scalar Forest.networkTwo[1].batteryStats 	"device total (mWs)" 	616.6555955652
+scalar Forest.networkTwo[1].batteryStats 	account 	0
+scalar Forest.networkTwo[1].batteryStats 	"energy (mWs)" 	616.6555955652
+scalar Forest.networkTwo[1].batteryStats 	"time (s)" 	5010.7506279168
+scalar Forest.networkTwo[1].batteryStats 	"account 0" 	616.6555955652
+scalar Forest.networkTwo[1].applSensor 	"activity duration" 	-1
+attr unit  s
+scalar Forest.networkTwo[1].applSensor 	firstPacketGeneration 	-1
+attr unit  s
+scalar Forest.networkTwo[1].applSensor 	lastPacketReception 	-2
+attr unit  s
+scalar Forest.networkTwo[1].applSensor 	nbPacketsSent 	4640
+scalar Forest.networkTwo[1].applSensor 	nbPacketsReceived 	0
+statistic Forest.networkTwo[1].applSensor 	latency
+field count 0
+field mean 0
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min 0
+field max 0

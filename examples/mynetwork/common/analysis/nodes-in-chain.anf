@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/MiXiM/examples/mynetwork/results/Nodes_in_chain-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="run=0">
+      <items xsi:type="scave:Group" name="run 0">
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[10].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[9].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[8].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[7].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[6].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[5].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[4].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[3].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[2].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[1].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+        <items xsi:type="scave:Add" filterPattern="file(/MiXiM/examples/mynetwork/results/Nodes_in_chain-0.sca) AND attr:configname(Nodes_in_chain) AND attr:runnumber(0) AND module(MyNetwork.node[0].batteryStats) AND name(&quot;device total (mWs)&quot;)"/>
+      </items>
+      <items xsi:type="scave:BarChart" name=""/>
+      <items xsi:type="scave:Compute" operation="sum"/>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.1"/>
+  </chartSheets>
+</scave:Analysis>
