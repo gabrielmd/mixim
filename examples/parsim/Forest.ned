@@ -59,7 +59,10 @@ network Forest extends BaseNetwork
 
 
         configurator: IPv4NetworkConfigurator {
-            config = xml("<config><interface hosts='*' address='192.168.x.x' netmask='255.255.x.x'/></config>");
+            config = xml("<config>" +
+            				"<interface hosts='*' address='10.0.0.x' netmask='255.255.255.x'/> " + 
+            				"<multicast-group hosts='enhancedGateway*' address='224.0.0.1' /> " +
+            			"</config>");
             @display("p=65,10");
         }
 

@@ -30,38 +30,42 @@ module TelosB extends Host802154_2400MHz
 {
     parameters:
         applicationType = "";
+        presentationType = "";
+        sessionType = "";
+
         string applSensorType = "WhiteboxApplLayer";
         string sensorType = default("TemperatureSensorLayer");
         string environmentType = "EnvironmentLayer";
-        string usbType = default("");
 
+        @display("bgb=210,450,white;i=device/palm;b=40,40,rect");
     gates:
         inout usbg;
     submodules:
 
+
         notificationBoard: NotificationBoard {
             parameters:
-                @display("p=53,155;is=s");
+                @display("p=140,302;is=s");
         }
 
         applSensor: <applSensorType> like IBaseSensorApplLayer if applSensorType != "" {
             parameters:
-                @display("p=70,30;i=app");
+                @display("p=70,170;i=app;is=l");
             gates:
 
         }
         sensor: <sensorType> like IBaseNetwLayer if sensorType != "" {
             parameters:
-                @display("p=25,100;i=app");
+                @display("p=70,100;i=device/antennatower");
         }
         environment: <environmentType> like IBaseApplLayer if environmentType != "" {
             parameters:
-                @display("p=25,30;i=app");
+                @display("p=70,30;i=misc/sun");
         }
 
         usb: <default("PPPInterface")> like IWiredNic {
             parameters:
-                @display("p=558,406,row,60;q=txQueue");
+                @display("p=140,380,row,60;q=txQueue");
         }
 
     connections allowunconnected: // some sensors will not use the usb
@@ -79,18 +83,18 @@ module TelosB extends Host802154_2400MHz
             tranl.upperControlOut --> { @display("ls=red;m=m,70,0,70,0"); } --> applSensor.lowerControlIn;
             tranl.upperControlIn <-- { @display("ls=red;m=m,70,0,70,0"); } <-- applSensor.lowerControlOut;
         }
-        if (applSensorType != "" && presentationType == "" && sessionType != "") {
-            sessl.upperLayerOut --> applSensor.lowerLayerIn;
-            sessl.upperLayerIn <-- applSensor.lowerLayerOut;
-            sessl.upperControlOut --> { @display("ls=red;m=m,70,0,70,0"); } --> applSensor.lowerControlIn;
-            sessl.upperControlIn <-- { @display("ls=red;m=m,70,0,70,0"); } <-- applSensor.lowerControlOut;
-        }
-        if (applSensorType != "" && presentationType != "") {
-            presl.upperLayerOut --> applSensor.lowerLayerIn;
-            presl.upperLayerIn <-- applSensor.lowerLayerOut;
-            presl.upperControlOut --> { @display("ls=red;m=m,70,0,70,0"); } --> applSensor.lowerControlIn;
-            presl.upperControlIn <-- { @display("ls=red;m=m,70,0,70,0"); } <-- applSensor.lowerControlOut;
-        }
+//        if (applSensorType != "" && presentationType == "" && sessionType != "") {
+//            sessl.upperLayerOut --> applSensor.lowerLayerIn;
+//            sessl.upperLayerIn <-- applSensor.lowerLayerOut;
+//            sessl.upperControlOut --> { @display("ls=red;m=m,70,0,70,0"); } --> applSensor.lowerControlIn;
+//            sessl.upperControlIn <-- { @display("ls=red;m=m,70,0,70,0"); } <-- applSensor.lowerControlOut;
+//        }
+//        if (applSensorType != "" && presentationType != "") {
+//            presl.upperLayerOut --> applSensor.lowerLayerIn;
+//            presl.upperLayerIn <-- applSensor.lowerLayerOut;
+//            presl.upperControlOut --> { @display("ls=red;m=m,70,0,70,0"); } --> applSensor.lowerControlIn;
+//            presl.upperControlIn <-- { @display("ls=red;m=m,70,0,70,0"); } <-- applSensor.lowerControlOut;
+//        }
 
         if (applSensorType != "" && sensorType != "") {
             applSensor.upperLayerOut --> sensor.lowerLayerIn;

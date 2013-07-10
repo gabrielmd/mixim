@@ -45,6 +45,7 @@ void SensorApplLayer::initialize(int stage) {
 		BaseLayer::catPacketSignal.initialize();
 
 		debugEV<< "in initialize() stage 0...";
+
 		debug = par("debug");
 		stats = par("stats");
 		trace = par("trace");
@@ -173,43 +174,42 @@ void SensorApplLayer::handleLowerMsg(cMessage * msg) {
 	ApplPkt *m;
 
 	switch (msg->getKind()) {
-	case DATA_MESSAGE:
-		m = static_cast<ApplPkt *> (msg);
-		nbPacketsReceived++;
-		packet.setPacketSent(false);
-		packet.setNbPacketsSent(0);
-		packet.setNbPacketsReceived(1);
-		packet.setHost(myAppAddr);
-		emit(BaseLayer::catPacketSignal, &packet);
-		if (stats) {
-			simtime_t theLatency = m->getArrivalTime() - m->getCreationTime();
-			if(trace) {
-			  hostsLatency(m->getSrcAddr()).collect(theLatency);
-			  latenciesRaw.record(SIMTIME_DBL(theLatency));
-			}
-			latency.collect(theLatency);
-			if (firstPacketGeneration < 0)
-				firstPacketGeneration = m->getCreationTime();
-			lastPacketReception = m->getArrivalTime();
-			if(trace) {
-			  debugEV<< "Received a data packet from host[" << m->getSrcAddr()
-			  << "], latency=" << theLatency
-			  << ", collected " << hostsLatency(m->getSrcAddr()).
-			  getCount() << "mean is now: " << hostsLatency(m->getSrcAddr()).
-			  getMean() << endl;
-			} else {
-				  debugEV<< "Received a data packet from host[" << m->getSrcAddr()
-				  << "], latency=" << theLatency << endl;
-			}
-		}
-		delete msg;
+        case DATA_MESSAGE:
+            m = static_cast<ApplPkt *> (msg);
+            nbPacketsReceived++;
+            packet.setPacketSent(false);
+            packet.setNbPacketsSent(0);
+            packet.setNbPacketsReceived(1);
+            packet.setHost(myAppAddr);
+            emit(BaseLayer::catPacketSignal, &packet);
 
-		//  sendReply(m);
-		break;
-		default:
-		EV << "Error! got packet with unknown kind: " << msg->getKind() << endl;
-		delete msg;
-		break;
+            if (stats) {
+                simtime_t theLatency = m->getArrivalTime() - m->getCreationTime();
+                if(trace) {
+                  hostsLatency(m->getSrcAddr()).collect(theLatency);
+                  latenciesRaw.record(SIMTIME_DBL(theLatency));
+                }
+                latency.collect(theLatency);
+                if (firstPacketGeneration < 0)
+                    firstPacketGeneration = m->getCreationTime();
+                lastPacketReception = m->getArrivalTime();
+                if(trace) {
+                  debugEV<< "Received a data packet from host[" << m->getSrcAddr()
+                  << "], latency=" << theLatency
+                  << ", collected " << hostsLatency(m->getSrcAddr()).
+                  getCount() << "mean is now: " << hostsLatency(m->getSrcAddr()).
+                  getMean() << endl;
+                } else {
+                      debugEV<< "Received a data packet from host[" << m->getSrcAddr()
+                      << "], latency=" << theLatency << endl;
+                }
+            }
+            delete msg;
+            break;
+        default:
+            EV << "Error! got packet with unknown kind: " << msg->getKind() << endl;
+            delete msg;
+            break;
 	}
 }
 

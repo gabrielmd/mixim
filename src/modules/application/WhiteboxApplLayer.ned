@@ -10,7 +10,6 @@ simple WhiteboxApplLayer like IBaseSensorApplLayer
         bool stats = default(false);   // stats switch
         bool trace = default(false); // trace switch
 
-        bool broadcastPackets = default(false); // send packets in broadcast mode
         double nbPackets = default(0);
         int destAddr = default(0);
         string trafficType = default("periodic");  	// Can be one of: periodic, uniform or exponential
@@ -18,7 +17,7 @@ simple WhiteboxApplLayer like IBaseSensorApplLayer
         double initializationTime @unit(s) = default(1 min); // minimum time before generation of the first packet
         int headerLength @unit(byte) = default(2 byte);
         bool notAffectedByHostState = default(true);
-        bool sleepAfterFinish;
+        bool sleepAfterFinish; // should a node turn its radio off after finishing its transmissions?
 
     gates:
         input lowerLayerIn; // from network layer

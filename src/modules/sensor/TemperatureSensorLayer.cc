@@ -33,6 +33,10 @@ void TemperatureSensorLayer::initialize(int stage) {
         measuringTime = par("measuringTime");
 
         measure = new cMessage("measure", MEASUREMENT);
+
+        // statistics
+        numMeasurementsRequests = 0;
+        numMeasurementsDone = 0;
     }else if(stage == 1){
         registerWithBattery("TemperatureSensorLayer", 1);
         drawCurrent(sleepingCurrent, 0);
@@ -45,16 +49,28 @@ TemperatureSensorLayer::~TemperatureSensorLayer() {
 }
 
 void TemperatureSensorLayer::finish() {
+    if(stats){
+        recordScalar("nr of measurements requested", numMeasurementsRequests);
+        recordScalar("nr of measurements done", numMeasurementsDone);
+    }
+
     cComponent::finish();
 }
 
+/**
+ * @brief handles the request to make a measurement.
+ */
 void TemperatureSensorLayer::handleLowerMsg(cMessage * msg) {
 
+    numMeasurementsRequests++;
     measure->setContextPointer(msg);
     drawCurrent(measuringCurrent, 0);
     scheduleAt(simTime() + measuringTime, measure);
 }
 
+/**
+ * @brief handles self messages.
+ */
 void TemperatureSensorLayer::handleSelfMsg(cMessage * msg){
     if (msg->isSelfMessage()) {
         EV<< simTime() << " " << msg->getName() << endl;
@@ -62,7 +78,11 @@ void TemperatureSensorLayer::handleSelfMsg(cMessage * msg){
         switch (msg->getKind()) {
             case MEASUREMENT:
             {
-
+                /*
+                 * After simulating the time spent for the measurement, it sends
+                 * a message to the upper layer (the environment) and gets the
+                 * real data.
+                 */
                 SensorPkt* pkt = static_cast<SensorPkt*>(msg->getContextPointer());
                 sendUp(pkt);
                 break;
@@ -74,9 +94,13 @@ void TemperatureSensorLayer::handleSelfMsg(cMessage * msg){
     }
 }
 
+/*
+ * @brief handles the real value.
+ */
 void TemperatureSensorLayer::handleUpperMsg(cMessage * msg) {
     SensorPkt* pkt = static_cast<SensorPkt*>(msg);
-    debugEV<< "Sending temperature value: " << pkt->getVal() <<"\n";
+    debugEV<< "Sending temperature value: " << pkt->getVal() << "\n";
     drawCurrent(sleepingCurrent, 0);
     sendDown(pkt);
+    numMeasurementsDone++;
 }

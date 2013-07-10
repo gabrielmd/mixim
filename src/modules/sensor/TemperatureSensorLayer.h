@@ -26,13 +26,13 @@ private:
      */
     TemperatureSensorLayer& operator=(const TemperatureSensorLayer&);
 
+    int numMeasurementsRequests;
+    int numMeasurementsDone;
+
 public:
     TemperatureSensorLayer()
         : BaseLayer()
-        //, dataOut(-1)
-        //, dataIn(-1)
-        //, ctrlOut(-1)
-        //, ctrlIn(-1)
+        , numMeasurementsRequests(0), numMeasurementsDone(0)
         , debug(false), stats(false), trace(false)
     {}
 
@@ -47,12 +47,6 @@ public:
     virtual void finish();
 
 protected:
-
-        // gates
-        //int dataOut;
-        //int dataIn;
-        //int ctrlOut;
-        //int ctrlIn;
 
         // module parameters
         bool debug, stats, trace;
